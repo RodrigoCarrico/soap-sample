@@ -1,0 +1,21 @@
+{
+	"name": "Java Dev Container",
+	"image": "mcr.microsoft.com/devcontainers/java:1-17-bullseye",
+	"mounts": [
+		{
+			"source": "${localEnv:HOME}/.m2",
+			"target": "/var/maven/.m2",
+			"type": "bind"
+		}
+	],
+	"privileged": true,
+	"containerUser": "vscode",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+			"installGradle": "false"
+		}
+	}
+
+}
